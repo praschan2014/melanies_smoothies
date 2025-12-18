@@ -36,7 +36,7 @@ my_insert_stmt = """ insert into smoothies.public.orders(ingredients, name_on_or
 time_to_insert = st.button('Submit')
 
 if time_to_insert:
-    st.write(my_insert_stmt)
+    ###st.write(my_insert_stmt)
     sess.sql(my_insert_stmt).collect()
     st.success('Your Smoothie is ordered!', icon="✅")
 
