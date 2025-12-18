@@ -28,7 +28,7 @@ if name_on_order:
 #st.stop()
 
 pd_df = my_dataframe.to_pandas()
-st.dataframe(pd_df)
+#st.dataframe(pd_df)
 #st.stop()
 
 ingredient_list = st.multiselect(
