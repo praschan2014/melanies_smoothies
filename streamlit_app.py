@@ -23,7 +23,7 @@ name_on_order = st.text_input('Name on Smoothie:')
 if name_on_order:
     st.write('Name for the Smoothie order will be: '+name_on_order)
 
-st.dataframe(data=my_dataframe, use_container_width=Tue)
+st.dataframe(data=my_dataframe, use_container_width=True)
 st.stop()
 
 ingredient_list = st.multiselect(
