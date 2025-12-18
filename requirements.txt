@@ -1,2 +1,4 @@
+# requitements.txt
 snowflake-snowpark-python
 sreamlit
+python=3.10.*
