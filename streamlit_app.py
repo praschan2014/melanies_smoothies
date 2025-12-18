@@ -10,10 +10,10 @@ st.write(
 )
 
 ### Added line for connection from outside SiS app
-cnx=st.connection("snowflake")
-session = cnx.session ##get_active_session()
+cnx = st.connection("snowflake")
+sess = cnx.session ##get_active_session()
 
-my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
+my_dataframe = sess.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 
 name_on_order = st.text_input('Name on Smoothie:')
 if name_on_order:
@@ -37,6 +37,6 @@ time_to_insert = st.button('Submit')
 
 if time_to_insert:
     st.write(my_insert_stmt)
-    session.sql(my_insert_stmt).collect()
+    sess.sql(my_insert_stmt).collect()
     st.success('Your Smoothie is ordered!', icon="✅")
 
