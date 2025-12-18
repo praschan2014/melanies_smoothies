@@ -29,7 +29,7 @@ if name_on_order:
 
 pd_df = my_dataframe.to_pandas()
 st.dataframe(pd_df)
-st.stop()
+#st.stop()
 
 ingredient_list = st.multiselect(
     'Chose upto 5 ingredients',
