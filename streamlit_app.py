@@ -11,7 +11,7 @@ st.write(
 
 ### Added line for connection from outside SiS app
 cnx = st.connection("snowflake")
-sess = cnx.session ##get_active_session()
+sess = cnx.session() ##get_active_session()
 
 my_dataframe = sess.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 
